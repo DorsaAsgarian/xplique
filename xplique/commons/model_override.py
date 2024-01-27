@@ -239,7 +239,7 @@ def find_layer(model: tf.keras.Model, layer: Union[str, int]) -> tf.keras.layers
         Layer found
     """
     if isinstance(layer, str):
-        return model.layer[layer]
+        return model.layers[layer]
     if isinstance(layer, int):
         return model.layers[layer]
     raise ValueError(f"Could not find any layer {layer}.")
